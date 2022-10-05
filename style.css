@@ -2,53 +2,214 @@
     margin: 0;
     padding: 0;
     font-family: mainfontbold;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 html{
     scroll-behavior: smooth;
 }
 @font-face {
     font-family: mainfontbold;
-    src: url(Nunito/static/Nunito-Bold.ttf);
+    src: url(Syne_Mono/SyneMono-Regular.ttf);
 }
 :root{
     --back: rgb(20,20,20);
     --pgt: translate(-50%,0%);
     --cgt: translate(-50%,-50%);
 }
+::-webkit-scrollbar{
+    background-color: transparent;
+    height: 10px;
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #fff6;
+    border-radius: 2px;
+}
 body{
     background: var(--back);
 }
-.page_1{
+.backdec{
+    position: fixed;
+    top: 50px;
+    left: -50px;
+    height: 70px;
+    width: 70px;
+    background-color: white;
+    border-radius: 50%;
+    filter: blur(100px);
+}
+.topbar{
     position: relative;
-    left: 50%;
-    height: 650px;
-    width: 1000px;
+    height: 80px;
+    width: 1200px;
     transform: var(--pgt);
+    left: 50%;
+    /* background-color: #fff1; */
 }
-.back{
+.topbar h1{
     position: absolute;
-    left: 50%;
-    height: 650px;
-    background-color: black;
-    width: 100%;
-    transform: var(--pgt);
-}
-.page_1 .h1{
-    position: absolute;
-    transform: var(--pgt);
-    left: 50%;
-    top: 40px;
-    font-size: 100px;
+    font-size: 40px;
+    transform: translate(-0%,-50%);
+    top: 50%;
     color: white;
 }
-.page_1 p{
+.menus{
+    position: absolute;
+    transform: translate(-0%,-50%);
+    top: 50%;
+    right: 150px;
+    height: 30px;
+    width: fit-content;
+}
+.menus h2{
+    position: relative;
+    display: inline-block;
+    font-size: 17px;
+    padding-left: 15px;
+    padding-right: 15px;
+    transform: translate(0%,-50%);
+    top: 50%;
+    color: rgba(255, 255, 255, 0.568);
+    cursor: pointer;
+}
+.menus h2:hover{
+    color: white;
+}
+.topbar .github{
+    position: absolute;
+    height: 40px;
+    width: 120px;
+    right: 0;
+    border-radius: 10px;
+    border: 2px solid white;
+    transform: translate(0%,-50%);
+    top: 50%;
+    color: white;
+}
+.topbar .github h2{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    font-size: 15px;
+}
+.topbar .github:hover{
+    background-color: white;
+    color: var(--back);
+}
+.main{
+    position: relative;
+    top: 20px;
+    /* background-color: #fff1; */
+    width: 1100px;
+    height: 300px;
+    left: 50%;
+    transform: var(--pgt);
+}
+.main h1{
     position: absolute;
     transform: var(--pgt);
     left: 50%;
-    color: white;
-    bottom: 40px;
+    top: 20px;
     text-align: center;
-    font-size: 20px;
-    width: 1000px;
+    color: white;
+    font-size: 45px;
+}
+.main h3{
+    position: absolute;
+    transform: var(--pgt);
+    left: 50%;
+    top: 170px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.582);
+}
+.main .btns{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 250px;
+    left: 50%;
+    height: 30px;
+    width: fit-content;
+}
+.main .btns .btn{
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+    border-radius: 10px;
+    border: 2px solid white;
+    margin: 0 5px 0 5px;
+    display: inline-block;
+    color: white;
+}
+.main .btns .bac{
+    background-color: white;
+    color: var(--back);
+}
+.main .btns .btn h4{
+    margin: 10px 20px 10px 20px;
+}
+.shows{
+    position: relative;
+    top: 20px;
+    left: 50%;
+    transform: var(--pgt);
+    height: 800px;
+    width: 1100px;
+}
+.shows .show{
+    position: absolute;
+    height:250px;
+    width: 400px;
+    background-color: rgb(77, 240, 140);
+    border-radius: 20px;
+    top: 100px;
+}
+.shows .s2{
+    height: 400px;
+    width: 250px;
+    left: 420px;
+    top: 50px;
+    background-color: rgb(240, 169, 77);
+}
+.shows .s3{
+    height: 300px;
+    background-color: rgb(77, 107, 240);
+    top: 150px;
+    width: calc(1100px - 250px - 20px - 400px);
+    left: calc( 250px + 20px + 20px + 400px);
+}
+
+
+
+.bottom{
+    position: relative;
+    top: 20px;
+    height: 200px;
+    width: 100%;
+    background-color: black;
+}
+.bottom .h1{
+    position: absolute;
+    bottom: 70%;
+    left: 50%;
+    transform: var(--pgt);
+    font-size: 40px;
+    color: white;
+}
+.bottom .p{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: var(--pgt);
+    font-size: 15px;
+    color: white;
+    letter-spacing: 3px;
+}
+.bottom .p1{
+    position: absolute;
+    bottom: 1px;
+    left: 50%;
+    transform: var(--pgt);
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.39);
 }
