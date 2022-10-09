@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: mainfontbold;
+    transition: 0.2s;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+// importing a font
+
+@font-face {
+    font-family: mainfontbold;
+    src: url(Syne_Mono/SyneMono-Regular.ttf);
+}
+
+// variables
+
+:root{
+    --back: rgb(20,20,20);
+    --pgt: translate(-50%,0%);
+    --cgt: translate(-50%,-50%);
+}
+
+// scrollbar
+
+::-webkit-scrollbar{
+    background-color: transparent;
+    height: 10px;
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #fff6;
+    border-radius: 2px;
+}
+::-webkit-scrollbar-corner{
+    background-color: transparent;
+}
+body{
+    background: var(--back);
+}
+
+// backdec is commented in htmlfile
+
+.backdec{
+    position: fixed;
+    top: 50px;
+    left: -50px;
+    height: 70px;
+    width: 70px;
+    background-color: white;
+    border-radius: 50%;
+    filter: blur(100px);
+}
+
+// topbar
+
+.topbar{
+    position: relative;
+    height: 80px;
+    width: 1200px;
+    transform: var(--pgt);
+    left: 50%;
+
+    h1{
+        position: absolute;
+        font-size: 40px;
+        transform: translate(-0%,-50%);
+        top: 50%;
+        color: white;
+    }
+    .menus{
+        position: absolute;
+        transform: translate(-0%,-50%);
+        top: 50%;
+        right: 150px;
+        height: 30px;
+        width: fit-content;
+
+        h2{
+            position: relative;
+            display: inline-block;
+            font-size: 17px;
+            padding-left: 15px;
+            padding-right: 15px;
+            transform: translate(0%,-50%);
+            top: 50%;
+            color: rgba(255, 255, 255, 0.568);
+            cursor: pointer;
+        }
+        h2:hover{
+            color: white;
+        }
+    }
+    .github{
+        position: absolute;
+        height: 40px;
+        width: 120px;
+        right: 0;
+        border-radius: 10px;
+        border: 2px solid white;
+        transform: translate(0%,-50%);
+        top: 50%;
+        color: white;
+
+        h2{
+            position: absolute;
+            transform: translate(-50%,-50%);
+            top: 50%;
+            left: 50%;
+            font-size: 15px;
+        }
+    }
+    .github:hover{
+        background-color: white;
+        color: var(--back);
+    }
+}
+
