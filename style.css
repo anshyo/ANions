@@ -1,111 +1,564 @@
-* {
-  margin: 0;
-  padding: 0;
-  font-family: mainfontbold;
-  transition: 0.2s;
+*{
+    margin: 0;
+    padding: 0;
+    font-family: mainfontbold;
+    transition: 0.2s;
 }
-
-html {
-  scroll-behavior: smooth;
+html{
+    scroll-behavior: smooth;
 }
-
 @font-face {
-  font-family: mainfontbold;
-  src: url(Syne_Mono/SyneMono-Regular.ttf);
+    font-family: mainfontbold;
+    src: url(Syne_Mono/SyneMono-Regular.ttf);
 }
-:root {
-  --back: rgb(20,20,20);
-  --pgt: translate(-50%,0%);
-  --cgt: translate(-50%,-50%);
+:root{
+    --back: rgb(20,20,20);
+    --pgt: translate(-50%,0%);
+    --cgt: translate(-50%,-50%);
+}
+::-webkit-scrollbar{
+    background-color: transparent;
+    height: 10px;
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #fff6;
+    border-radius: 2px;
+}
+::-webkit-scrollbar-corner{
+    background-color: transparent;
+}
+body{
+    background: var(--back);
+    user-select: none;
+}
+.backdec{
+    position: fixed;
+    top: 50px;
+    left: -50px;
+    height: 70px;
+    width: 70px;
+    background-color: white;
+    border-radius: 50%;
+    filter: blur(100px);
+}
+.topbar{
+    position: relative;
+    height: 80px;
+    width: 1200px;
+    transform: var(--pgt);
+    left: 50%;
+    /* background-color: #fff1; */
+}
+.topbar h1{
+    position: absolute;
+    font-size: 40px;
+    transform: translate(-0%,-50%);
+    top: 50%;
+    color: white;
+}
+.menus{
+    position: absolute;
+    transform: translate(-0%,-50%);
+    top: 50%;
+    right: 150px;
+    height: 30px;
+    width: fit-content;
+}
+.menus h2{
+    position: relative;
+    display: inline-block;
+    font-size: 17px;
+    padding-left: 15px;
+    padding-right: 15px;
+    transform: translate(0%,-50%);
+    top: 50%;
+    color: rgba(255, 255, 255, 0.568);
+    cursor: pointer;
+}
+.menus h2:hover{
+    color: white;
+}
+.topbar .github{
+    position: absolute;
+    height: 40px;
+    width: 120px;
+    right: 0;
+    border-radius: 10px;
+    border: 2px solid white;
+    transform: translate(0%,-50%);
+    top: 50%;
+    color: white;
+}
+.topbar .github h2{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    font-size: 15px;
+}
+.topbar .github:hover{
+    background-color: white;
+    color: var(--back);
+}
+.main{
+    position: relative;
+    top: 20px;
+    /* background-color: #fff1; */
+    width: 1100px;
+    height: 300px;
+    left: 50%;
+    transform: var(--pgt);
+}
+.main h1{
+    position: absolute;
+    transform: var(--pgt);
+    left: 50%;
+    top: 20px;
+    text-align: center;
+    color: white;
+    font-size: 45px;
+}
+.main h3{
+    position: absolute;
+    transform: var(--pgt);
+    left: 50%;
+    top: 150px;
+    font-size: 13px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.582);
+}
+.main .btns{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 250px;
+    left: 50%;
+    height: 30px;
+    width: fit-content;
+}
+.main .btns .btn{
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+    border-radius: 10px;
+    border: 2px solid white;
+    margin: 0 5px 0 5px;
+    display: inline-block;
+    color: white;
+}
+.main .btns .bac{
+    background-color: white;
+    color: var(--back);
+}
+.main .btns .btn h4{
+    margin: 10px 20px 10px 20px;
+}
+.shows{
+    position: relative;
+    top: 20px;
+    left: 50%;
+    transform: var(--pgt);
+    height: 800px;
+    width: 1100px;
+}
+.shows .show{
+    position: absolute;
+    height:250px;
+    width: 400px;
+    background-color: rgb(77, 240, 140);
+    border-radius: 20px;
+    top: 100px;
 }
 
-::-webkit-scrollbar {
-  background-color: transparent;
-  height: 10px;
-  width: 10px;
+
+
+.shows .s2{
+    height: 400px;
+    width: 250px;
+    left: 420px;
+    top: 50px;
+    background-color: rgb(240, 169, 77);
+}
+.shows .s2 .heading::-webkit-scrollbar{
+    background-color: transparent;
+    height: 1px;
+    width: 1px;
+}
+.shows .s2 .heading::-webkit-scrollbar-thumb{
+    background-color: #fff6;
+    border-radius: 2px;
+}
+.shows .s2 .heading::-webkit-scrollbar-corner{
+    background-color: transparent;
+}
+.shows .s2 .heading{
+    position: absolute;
+    transform: var(--pgt);
+    height: 220px;
+    width: 196px;
+    left: 50%;
+    top: 50px;
+    background-color: var(--back);
+    border-radius: 15px;
+    overflow: scroll;
+}
+.shows .s2 .heading .catagories{
+    position: relative;
+    transform: var(--pgt);
+    left: -50%;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    height: 30px;
+    width: 170px;
+    /* background-color: #fff1; */
+    color: white;
+    transition: 0.05s;
+    transition-delay: calc(var(--i) * 0.05s);
+}
+.shows .s2 .heading .catagoriesafter{
+    /* color: rgb(240, 169, 77); */
+    transition: 0.05s;
+    transition-delay: calc(var(--i) * 0.05s);
+    left: 50%;
+}
+.shows .s2 .heading .catagories p{
+    position: absolute;
+    transform: translate(-0%,-50%);
+    text-align: left;
+    top: 50%;
+}
+.shows .s2 .optionsbdr{
+    position: absolute;
+    transform: var(--pgt);
+    left: 50%;
+    bottom: 50px;
+    height: 46px;
+    width: 196px;
+    border-radius: 15px;
+    border: 4px solid var(--back);
+}
+.shows .s2 .optionsbdr .options{
+    position: absolute;
+    transform: var(--cgt);
+    top: 50%;
+    left: 50%;
+    height: 40px;
+    width: 190px;
+    background-color: var(--back);
+    border-radius: 10px;
+}
+.shows .s2 .optionsbdr .options::before{
+    content: 'Animation';
+    position: absolute;
+    transform: var(--cgt);
+    top: 50%;
+    left: 37.5%;
+    color: rgb(240, 169, 77);
+}
+.shows .s2 .optionsbdr .options .sep{
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background-color: rgb(240, 169, 77);
+    left: 75%;
 }
 
-::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.4);
-  border-radius: 2px;
+
+
+.shows .s3{
+    height: 300px;
+    background-color: rgb(77, 107, 240);
+    top: 150px;
+    width: calc(1100px - 250px - 20px - 400px);
+    left: calc( 250px + 20px + 20px + 400px);
 }
 
-::-webkit-scrollbar-corner {
-  background-color: transparent;
+
+
+.bottom{
+    position: relative;
+    top: 20px;
+    height: 200px;
+    width: 100%;
+    background-color: black;
+}
+.bottom .h1{
+    position: absolute;
+    bottom: 70%;
+    left: 50%;
+    transform: var(--pgt);
+    font-size: 40px;
+    color: white;
+}
+.bottom .p{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: var(--pgt);
+    font-size: 15px;
+    color: white;
+    letter-spacing: 3px;
+}
+.bottom .p1{
+    position: absolute;
+    bottom: 1px;
+    left: 50%;
+    transform: var(--pgt);
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.39);
 }
 
-body {
-  background: var(--back);
+
+
+/* sildeshow for animation section */
+
+.shows .s2 .heading .slide{
+    position: absolute;
+    transform: var(--cgt);
+    top: 50%;
+    left: 50%;
+    height: 120px;
+    width: 100%;
+    /* border: 1px solid #fff1; */
+    /* overflow: hidden; */
+}
+.shows .s2 .heading .slideafter{
+    left: 150%;
 }
 
-.backdec {
-  position: fixed;
-  top: 50px;
-  left: -50px;
-  height: 70px;
-  width: 70px;
-  background-color: white;
-  border-radius: 50%;
-  filter: blur(100px);
+/* hello animation on slide show of animation  */
+
+.shows .s2 .heading .slide .helloAnimation{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    animation: helloAnimationFrame 20s infinite;
+    /* animation-delay: -10s; */
+}
+@keyframes helloAnimationFrame {
+    0% , 50% , 100%{
+        top: 0;
+        left: 0;
+    }
+    60%{
+        left: 100%;
+        top: 0;
+    }
+    70%{
+        left: 100%;
+        top: -100%;
+    }
+    80%{
+        left: -100%;
+        top: -100%;
+    }
+    90%{
+        left: -100%;
+        top: 0%;
+    }
+}
+.shows .s2 .heading .slide .helloAnimation h1{
+    position: absolute;
+    font-size: 20px;
+    color: #252839;
+    -webkit-text-stroke: 0.3vw #383d52;
+    text-transform: uppercase;
+    transform: var(--cgt);
+    top: 50%;
+    left: 50%;
+}
+.shows .s2 .heading .slide .helloAnimation h1::before{
+    content: "Animation";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #01fe87;
+    -webkit-text-stroke: 0px #383d52;
+    border-right: 2px solid #01fe87;
+    overflow: hidden;
+    animation: helloAnimation 6s linear infinite;
+}
+@keyframes helloAnimation{
+    0%,10%,100%{
+        width: 0;
+    }
+    70%,90%
+    {
+        width: 100%;
+    }
 }
 
-.topbar {
-  position: relative;
-  height: 80px;
-  width: 1200px;
-  transform: var(--pgt);
-  left: 50%;
+
+/* block animation on slide show of animation  */
+
+.shows .s2 .heading .slide .blockAnimation{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: -100%;
+    animation: helloAnimationFrame 20s infinite;
+    animation-delay: 10s;
+} 
+.shows .s2 .heading .slide .blockAnimation .loop1{
+    position: absolute;
+    transform: translate(-50%,-50%) scale(0.2);
+    top: 50%;
+    left: 50%;
+    
 }
-.topbar h1 {
-  position: absolute;
-  font-size: 40px;
-  transform: translate(0%, -50%);
-  top: 50%;
-  color: white;
+.shows .s2 .heading .slide .blockAnimation .loop1 .area{
+    position: absolute;
+    transform-style: preserve-3d;
+    transform: translate(-50%,-50%) rotateX(60deg) rotateZ(45deg) ;
+    transition: 7s;
+    /* border: 1px solid wheat; */
+    background-color: #fff3;
+    height: 400px;
+    width: 400px;
+    top: 50%;
+    left: 50%;
 }
-.topbar .menus {
-  position: absolute;
-  transform: translate(0%, -50%);
-  top: 50%;
-  right: 150px;
-  height: 30px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+.shows .s2 .heading .slide .blockAnimation .loop1 .block{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    /* transform: ; */
+    top: 0px;
+    left: 0px;
+    transform-style: preserve-3d;
+    animation: block 20s infinite;
+    animation-delay: calc(var(--i)*1s);
 }
-.topbar .menus h2 {
-  position: relative;
-  display: inline-block;
-  font-size: 17px;
-  padding-left: 15px;
-  padding-right: 15px;
-  transform: translate(0%, -50%);
-  top: 50%;
-  color: rgba(255, 255, 255, 0.568);
-  cursor: pointer;
+.shows .s2 .heading .slide .blockAnimation .loop1 .block .face{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(45, 126, 119, 0.322);
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.664) ;
+    position: absolute;
+    transform-style: preserve-3d;
 }
-.topbar .menus h2:hover {
-  color: white;
+.shows .s2 .heading .slide .blockAnimation .loop1 .block .f1{
+    transform: translateZ(100px);
 }
-.topbar .github {
-  position: absolute;
-  height: 40px;
-  width: 120px;
-  right: 0;
-  border-radius: 10px;
-  border: 2px solid white;
-  transform: translate(0%, -50%);
-  top: 50%;
-  color: white;
+.shows .s2 .heading .slide .blockAnimation .loop1 .block .f3{
+    transform: rotateX(90deg) translateZ(50px) translateY(50px);
 }
-.topbar .github h2 {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-  font-size: 15px;
+.shows .s2 .heading .slide .blockAnimation .loop1 .block .f4{
+    transform: rotateX(90deg) translateZ(-50px) translateY(50px);
 }
-.topbar .github:hover {
-  background-color: white;
-  color: var(--back);
-}/*# sourceMappingURL=style.css.map */
+.shows .s2 .heading .slide .blockAnimation .loop1 .block .f5{
+    transform: rotateX(90deg) rotatey(90deg) translateZ(-50px) translateY(50px);
+}
+.shows .s2 .heading .slide .blockAnimation .loop1 .block .f6{
+    transform: rotateX(90deg) rotatey(90deg) translateZ(50px) translateY(50px);
+}
+@keyframes block {
+    0%{
+        top: 0px;
+        left: 0px;
+        transform: translateY(0px) translateX(0px) translateZ(0px);
+    }
+    5%{
+        top: 100px;
+        left: 0px;
+        transform: translateY(0px) translateX(0px) translateZ(0px);
+    }
+    10%{
+        top: 200px;
+        left: 0px;
+        transform: translateY(0px) translateX(0px) translateZ(0px);
+    }
+    15%{
+        top: 300px;
+        left: 0px;
+        transform: translateY(0px) translateX(0px) translateZ(0px);
+    }
+    20%{
+        top: 300px;
+        left: 100px;
+        transform: translateY(0px) translateX(0px) translateZ(0px);
+    }
+    25%{
+        top: 300px;
+        left: 200px;
+        transform: translateY(0px) translateX(0px) translateZ(0px);
+    }
+    30%{
+        top: 300px;
+        left: 300px;
+        transform: translateY(0px) translateX(0px) translateZ(0px);
+    }
+    35%{
+        top: 200px;
+        left: 300px;
+        transform: translateY(0px) translateX(0px) translateZ(0px);
+    }
+    40%{
+        top: 100px;
+        left: 300px;
+        transform: translateY(0px) translateX(0px) translateZ(0px);
+    }
+    45%{
+        top: 0px;
+        left: 300px;
+        transform: translateY(0px) translateX(0px) translateZ(0px);
+    }
+    50%{
+        top: 0px;
+        left: 200px;
+        transform: translateY(0px) translateX(0px) translateZ(0px);
+    }
+    55%{
+        top: 0px;
+        left: 100px;
+        transform: translateY(0px) translateX(0px) translateZ(0px);
+    }
+    60%{
+        top: 100px;
+        left: 100px;
+        transform: translateY(0px) translateX(0px) translateZ(0px);
+    }
+    65%{
+        top: 200px;
+        left: 100px;
+        transform: translateY(0px) translateX(0px) translateZ(0px);
+    }
+    70%{
+        top: 200px;
+        left: 200px;
+        transform: translateY(0px) translateX(0px) translateZ(0px);
+    }
+    75%{
+        top: 100px;
+        left: 200px;
+        transform: translateY(0px) translateX(0px) translateZ(0px);
+    }
+    80%{
+        top: 100px;
+        left: 200px;
+        transform: translateY(0px) translateX(0px) translateZ(0px);
+    }
+    85%{
+        top: 100px;
+        left: 200px;
+        transform: translateZ(100px);
+    }
+    90%{
+        top: 100px;
+        left: 00px;
+        transform: translateZ(100px);
+    }
+    95%{
+        top: 0px;
+        left: 0px;
+        transform: translateZ(100px);
+    }
+    100%{
+        top: 00px;
+        left: 0px;
+        transform: translateZ(00px);
+    }
+}
