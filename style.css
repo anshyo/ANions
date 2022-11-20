@@ -193,9 +193,188 @@ body{
 .shows{
     position: relative;
     top: 40px;
-    height: 300px;
-    width: 900px;
-    background: #fff6;
+    height: max-content;
+    width: 700px;
+    /* border: 1px solid #fff1; */
     transform: var(--pgt);
     left: 50%;
+}
+.shows .show{
+    position: relative;
+    width: 100%;
+    height: 120px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    background-color: rgb(255, 255, 255);
+}
+.shows .show h1{
+    position: absolute;
+    transform: translate(0% , -50%);
+    top: 50%;
+    left: 50px;
+    color: var(--back);
+    font-size: 25px;
+    margin-right: 30%;
+}
+.shows .show .preview{
+    position: absolute;
+    transform: translate(-50% , -50%);
+    top: 50%;
+    right: calc(10px - 15%);
+    background-color: var(--back);
+    height: 100px;
+    width: 30%;
+    border-radius: 15px;
+}
+
+.shows .showa{
+    height: 420px;
+}
+
+.shows .hello-animation .preview h1{
+    position: relative;
+    font-size: 20px;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    color: #252839;
+    -webkit-text-stroke: 0.3vw #383d52;
+    text-transform: uppercase;
+    /* background-color: aliceblue; */
+    width: max-content;
+}
+.shows .hello-animation .preview h1::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #01fe87;
+    -webkit-text-stroke: 0vw #383d52;
+    border-right: 2px solid #01fe87;
+    overflow: hidden;
+    width: 100%;
+}
+.shows .hello-animation .preview .h1{
+    font-size: 50px;
+}
+.shows .hello-animation .preview .h1::before{
+    animation: animate-hell 6s linear infinite;
+}
+@keyframes animate-hell{
+    0%,10%,100%{
+        width: 0;
+    }
+    70%,90%
+    {
+        width: 100%;
+    }
+}
+.shows .show .previewa{
+    transform: translate(-50%,-50%);
+    height: 400px;
+    right: -47.1%;
+    width: 680px;
+}
+
+
+
+.shows .sphere .preview .p .spheree{
+    height: 200px;
+    width: 200px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    /* border: rgba(255, 235, 205, 0.26) solid 1px; */
+    transform: translate(-50%,-50%) scale(0.3);
+    transform-style: preserve-3d;
+}
+.shows .sphere .preview .p .sphereee{
+    animation: sph 80s infinite;
+}
+@keyframes sph {
+    0%{
+        transform: translate(-50%,-50%);
+    }
+    100%{
+        transform: translate(-50%,-50%) rotateY(8turn) rotateX(8turn) rotateZ(8turn);
+    }
+}
+.shows .sphere .preview .p .spheree .s-1{
+    height: 200px;
+    width: 200px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    /* border: rgba(255, 153, 1, 0.233) solid 4px; */
+    transform: translate(-50%,-50%);
+    transform-style: preserve-3d;
+    border-radius: 50%;
+}
+.shows .sphere .preview .p .spheree .s-1 .cs{
+    height: 200px;
+    width: 200px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    border: rgba(52, 255, 1, 0.096) solid 1px;
+    background-color: rgba(52, 255, 1, 0.009);
+    transform: translate(-50%,-50%) rotateY(calc(var(--i)*11.25deg));
+    transform-style: preserve-3d;
+    border-radius: 50%;
+}
+.shows .sphere .preview .p .spheree .s-2{
+    height: 200px;
+    width: 200px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    /* border: rgba(255, 153, 1, 0.233) solid 4px; */
+    transform: translate(-50%,-50%) rotateZ(90deg);
+    transform-style: preserve-3d;
+    border-radius: 50%;
+}
+.shows .sphere .preview .p .spheree .s-2 .cs{
+    height: 200px;
+    width: 200px;
+    top: 50%;
+    left: 50%;
+    background-color: rgba(52, 255, 1, 0.009);
+    position: absolute;
+    border: rgba(52, 255, 1, 0.11) solid 1px;
+    transform: translate(-50%,-50%) rotateY(calc(var(--i)*11.25deg));
+    transform-style: preserve-3d;
+    border-radius: 50%;
+}
+.shows .sphere .preview .p .spheree .s-3{
+    height: 200px;
+    width: 200px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    /* border: rgba(255, 153, 1, 0.233) solid 4px; */
+    transform: translate(-50%,-50%) rotateX(90deg);
+    transform-style: preserve-3d;
+    border-radius: 50%;
+}
+.shows .sphere .preview .p .spheree .s-3 .cs{
+    height: 200px;
+    width: 200px;
+    top: 50%;
+    left: 50%;
+    background-color: rgba(52, 255, 1, 0.009);
+    position: absolute;
+    border: rgba(52, 255, 1, 0.11) solid 1px;
+    transform: translate(-50%,-50%) rotateY(calc(var(--i)*11.25deg));
+    transform-style: preserve-3d;
+    border-radius: 50%;
+}
+.shows .sphere .preview .p .spheree .s-3 .css , .shows .sphere .preview .p .spheree .s-2 .css , .shows .sphere .preview .p .spheree .s-2 .css{
+    transform: scale(0);
+}
+
+
+.cntr{
+    top: calc(var(--j)*40px);
 }
