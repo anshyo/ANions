@@ -248,6 +248,7 @@ body{
     background-color: var(--back);
     height: 100px;
     width: 30%;
+    overflow: hidden;
     border-radius: 15px;
 }
 
@@ -309,6 +310,7 @@ body{
     width: 200px;
     top: 50%;
     left: 50%;
+    transition: 0.2s;
     position: absolute;
     /* border: rgba(255, 235, 205, 0.26) solid 1px; */
     transform: translate(-50%,-50%) scale(0.3);
@@ -316,6 +318,7 @@ body{
 }
 .shows .sphere .preview .p .sphereee{
     animation: sph 80s infinite;
+    transition: 0.2s;
 }
 @keyframes sph {
     0%{
@@ -334,6 +337,7 @@ body{
     /* border: rgba(255, 153, 1, 0.233) solid 4px; */
     transform: translate(-50%,-50%);
     transform-style: preserve-3d;
+    transition: 0.2s;
     border-radius: 50%;
 }
 .shows .sphere .preview .p .spheree .s-1 .cs{
@@ -343,6 +347,7 @@ body{
     left: 50%;
     position: absolute;
     border: rgba(255, 255, 255, 0.096) solid 1px;
+    transition: 0.2s;
     background-color: rgba(255, 255, 255, 0.009);
     transform: translate(-50%,-50%) rotateY(calc(var(--i)*11.25deg));
     transform-style: preserve-3d;
@@ -355,6 +360,7 @@ body{
     left: 50%;
     position: absolute;
     /* border: rgba(255, 153, 1, 0.233) solid 4px; */
+    transition: 0.2s;
     transform: translate(-50%,-50%) rotateZ(90deg);
     transform-style: preserve-3d;
     border-radius: 50%;
@@ -365,6 +371,7 @@ body{
     top: 50%;
     left: 50%;
     background-color: rgba(255, 255, 255, 0.009);
+    transition: 0.2s;
     position: absolute;
     border: rgba(255, 255, 255, 0.096) solid 1px;
     transform: translate(-50%,-50%) rotateY(calc(var(--i)*11.25deg));
@@ -379,6 +386,7 @@ body{
     position: absolute;
     /* border: rgba(255, 153, 1, 0.233) solid 4px; */
     transform: translate(-50%,-50%) rotateX(90deg);
+    transition: 0.2s;
     transform-style: preserve-3d;
     border-radius: 50%;
 }
@@ -390,6 +398,7 @@ body{
     background-color: rgba(255, 255, 255, 0.009);
     position: absolute;
     border: rgba(255, 255, 255, 0.096) solid 1px;
+    transition: 0.2s;
     transform: translate(-50%,-50%) rotateY(calc(var(--i)*11.25deg));
     transform-style: preserve-3d;
     border-radius: 50%;
@@ -402,3 +411,239 @@ body{
 .cntr{
     top: calc(var(--j)*40px);
 }
+
+
+
+
+
+
+
+.shows .sand .preview .area{
+    height: 600px;
+    width: 450px;
+    transform: translate(-50%,-50%) scale(0.2);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+}
+.shows .sand .preview .areaa{
+    transform: translate(-50%,-50%) scale(0.5);
+}
+.shows .sand .preview .area .glass{
+    height: 550px;
+    width: 400px;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* border: wheat 1px solid; */
+    /* overflow: hidden; */
+}
+.shows .sand .preview .glass-in{
+    height: 396px;
+    width: 400px;
+    /* border: 1px white solid; */
+    position: absolute;
+    overflow: hidden;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+}
+.shows .sand .preview .glass-ina{
+    animation: clock_rotate 10s infinite;
+
+}
+.shows .sand .preview .area .glass .parts{
+    transform: translate(-50%,-50%);
+    top: 3%;
+    left:50%;
+    position: absolute;
+}
+.shows .sand .preview .area .glass .part-2{
+    transform: translate(-50%,-50%) rotate(180deg);
+    bottom: -277%;
+}
+.shows .sand .preview .area .glass .parts .up{
+    width: 250px;
+    height: 250px;
+    transform: translate(-50%,-50%) rotate(135deg);
+    top: 25%;
+    left: 50%;
+    position: absolute;
+    overflow: hidden;
+    border-top: 5px white solid;
+    border-right: 5px white solid;
+}
+.shows .sand .preview .area .glass .parts .up::after{
+    content: '';
+    height: 250px;
+    width: 400px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    transform: rotate(45deg) translateY(178px) translateX(-30px);
+}
+.area .glass .parts .cover{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border: 5px rgb(255, 255, 255) solid;
+    height: 20px;
+    width: 370px;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    top: 25%;
+    left: 50%;
+}
+.shows .sand .preview .area .glass .middle{
+    border: white 5px solid;
+    background-color: white;
+    height: 31px;
+    width: 20px;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    overflow: hidden;
+
+}
+
+.shows .sand .preview .area .glass .part-1 .up .sand{
+    height:180px;
+    width: 350px;
+    background-color: #d69243;
+    left: 50%;
+    position: absolute;
+    transform: rotate(45deg) translateX(70px) translateY(150px) translate(-50%,-50%);
+}
+.shows .sand .preview .area .glass .part-1 .up .sanda{
+    animation: sand-1 10s infinite;
+}
+.shows .sand .preview .area .glass .part-2 .up .sand{
+    height: 180px;
+    width: 350px;
+    background-color: #d69243;
+    left: 50%;
+    position: absolute;
+    transform: rotate(45deg) translateX(70px) translateY(150px) translate(-50%,-50%);
+
+}
+.shows .sand .preview .area .glass .part-2 .up .sandb{
+    animation: sand-2 10s infinite;
+}
+.shows .sand .preview .area .glass .part-1 .up .line{
+    height: 180px;
+    width: 15px;
+    position: absolute;
+    left: 50%;
+    background-color: #d69243;
+    transform: rotate(45deg) translateX(27px) translateY(30px) translate(-50%,-50%);
+}
+.shows .sand .preview .area .glass .part-1 .up .linea{
+    animation: line-1 10s infinite;
+}
+.shows .sand .preview .area .glass .part-2 .up .line{
+    height: 180px;
+    left: 50%;
+    position: absolute;
+    width: 15px;
+    background-color: #d69243;
+    transform: rotate(45deg) translateX(27px) translateY(30px) translate(-50%,-50%);
+}
+.shows .sand .preview .area .glass .part-2 .up .lineb{
+    animation: line-2 10s infinite;
+
+}
+
+
+@keyframes sand-1 {
+    0%{
+        transform: rotate(45deg) translateX(70px) translateY(150px) translate(-50%,-50%);
+    }
+    25%{
+        transform: rotate(45deg) translateX(70px) translateY(-20px) translate(-50%,-50%);
+    }
+    25.0003%{
+        transform: rotate(45deg) translateX(70px) translateY(320px) translate(-50%,-50%);
+    }
+
+
+
+    60%{
+        transform: rotate(45deg) translateX(70px) translateY(320px) translate(-50%,-50%);
+    }
+    100%{
+        transform: rotate(45deg) translateX(70px) translateY(150px) translate(-50%,-50%);
+    }
+}
+@keyframes sand-2 {
+    0%{
+        transform: rotate(45deg) translateX(70px) translateY(320px) translate(-50%,-50%);
+    }
+    35%{
+        transform: rotate(45deg) translateX(70px) translateY(150px) translate(-50%,-50%);
+    }
+    35.0002%{
+        transform: rotate(45deg) translateX(70px) translateY(150px) translate(-50%,-50%);
+    }
+
+
+
+    58%{
+        transform: rotate(45deg) translateX(70px) translateY(150px) translate(-50%,-50%);
+    }
+    100%{
+        transform: rotate(45deg) translateX(70px) translateY(-20px) translate(-50%,-50%);
+    }
+}
+
+@keyframes clock_rotate {
+    0%{
+        transform: translate(-50%,-50%) rotate(0);
+    }
+    36%{
+        transform: translate(-50%,-50%) rotate(0);
+    }
+    57%{
+        transform: translate(-50%,-50%) rotate(180deg);
+    }
+    99.6%{
+        transform: translate(-50%,-50%) rotate(180deg);
+    }
+    100%{
+        transform: translate(-50%,-50%) rotate(0);
+    }
+}
+
+@keyframes line-1 {
+    0%{
+        background-color: transparent;
+    }
+    57.009%{
+        background-color: transparent;
+    }
+    58%{
+        background-color: #d69243;
+    }
+    100%{
+        background-color: #d69243;
+    }
+}
+@keyframes line-2 {
+    0%{
+        background-color: #d69243;
+    }
+    35%{
+        background-color: #d69243;
+    }
+    35.001%{
+        background-color: transparent;
+    }
+    100%{
+        background-color: transparent;
+    }
+}
+
+
+
+
+
+
